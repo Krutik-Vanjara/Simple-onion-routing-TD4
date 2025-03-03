@@ -1,80 +1,63 @@
-# Simple Onion Routing Network
+# Basic Onion Routing Network
 
-## Overview
-This project implements a simple onion routing network where messages are securely transmitted through multiple nodes before reaching the final destination. The system ensures privacy by encrypting messages at each hop.
+## Summary
+This project establishes a basic onion routing network that securely transmits messages through multiple nodes, ensuring privacy by encrypting data at each point along the path.
 
-## Features
-- Start multiple nodes and users.
-- Register nodes with a central registry.
-- Send and receive encrypted messages.
-- RSA and symmetric encryption support.
-- Forward messages through a defined network circuit.
-- Simple API routes for retrieving message details.
+## Key Features
+- Ability to launch multiple nodes and users.
+- Node registration with a central repository.
+- Sending and receiving of encrypted communications.
+- Support for both RSA and symmetric encryption.
+- Routing messages through a specified network circuit.
+- Simple API endpoints for accessing message information.
 
-## Project Structure
+## Project Layout
 ```
 Simple-Onion-Routing-Network-TD4/
 │── src/
-│   ├── crypto.ts   # Cryptographic functions
-│   ├── network.ts  # Network and routing logic
-│   ├── registry.ts # Node registration logic
+│   ├── crypto.ts   # Contains cryptographic functionality
+│   ├── network.ts  # Manages network and routing operations
+│   ├── registry.ts # Handles node registration processes
 │── __test__/
 │   ├── tests/
-│   │   ├── onionRouting.test.ts  # Tests for onion routing
+│   │   ├── onionRouting.test.ts  # Tests related to onion routing
 │── package.json
 │── README.md
 ```
 
-## Installation
+## Installation Instructions
 1. Clone the repository:
    ```sh
    git clone <repository-url>
    cd Simple-Onion-Routing-Network-TD4
    ```
-2. Install dependencies:
+2. Install the necessary dependencies:
    ```sh
    npm install
    ```
 
-## Usage
-### Starting the Network
-To start the network with a specified number of nodes and users, modify the network initialization script accordingly.
+## How to Use
+### Initiating the Network
+To begin the network with a chosen number of nodes and users, adjust the network initialization script as needed.
 
 ### API Endpoints
-The system provides the following API routes:
-- **Node Routes:**
+The following API routes are available:
+- **Node API:**
   - `GET /getLastReceivedEncryptedMessage`
   - `GET /getLastReceivedDecryptedMessage`
   - `GET /getLastMessageDestination`
   - `GET /getPrivateKey`
-- **User Routes:**
+- **User API:**
   - `GET /getLastReceivedMessage`
   - `GET /getLastSentMessage`
 
-## Cryptographic Functions
-The cryptographic module provides functions for:
-- RSA key generation (`generateRsaKeyPair`)
-- RSA encryption and decryption (`rsaEncrypt`, `rsaDecrypt`)
-- Symmetric key generation (`createRandomSymmetricKey`)
-- Symmetric encryption and decryption (`symEncrypt`, `symDecrypt`)
-- Key import/export functions
-
-## Running Tests
-The project includes automated tests using Jest.
-To run tests, use:
-```sh
-npm run test
-```
-### Current Test Status
-✔ **27 Passed Tests**
-✎ **5 TODO Tests** (Hidden tests need implementation)
-
-## Future Improvements
-- Implement additional hidden tests.
-- Enhance security mechanisms.
-- Optimize message forwarding performance.
+## Cryptographic Module
+The crypto module includes functions for:
+- Generating RSA key pairs (`generateRsaKeyPair`)
+- Performing RSA encryption and decryption (`rsaEncrypt`, `rsaDecrypt`)
+- Enhancing the efficiency of message forwarding.
 
 ## License
 This project is licensed under the MIT License.
 
-# Simple-onion-routing-TD4
+
